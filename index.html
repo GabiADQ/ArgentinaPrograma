@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    
+    <!-- MENU - ENCABEZADO -->
+    
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">L10</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#habilidades" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#experiencia" onclick="seleccionar()">EXPERIENCIA</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- INICIO -->
+    
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/Messi.png" alt="">
+            </div>
+            <h1>LIONEL MESSI</h1>
+            <h2>Programador Full Stack</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/leomessi"target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/fundacionmessi"target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/leomessi/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@LeoMessi"target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@officialleomessi"target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>SOBRE MÍ</h2>
+            <p>Soy un apasionado programador con 14 años de experiencia en el desarrollo de sitios web y aplicaciones. Me encanta resolver 
+                problemas complejos y crear soluciones innovadoras que superen las expectativas de los clientes. Tengo habilidades en varios lenguajes
+                de programación y tecnologías, disfruto trabajando en equipo. Aparte de todo esto, soy campeón del mundo.</p>
+            <h3>Intereses</h3>  
+            <div class="fila">
+                <!-- intereses -->
+                <div class="col">
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-twitch"></i>
+                            <span>TWICH</span>
+                            </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-xbox"></i>
+                            <span>XBOX</span>
+                            </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-google"></i>
+                            <span>GOOGLE</span>
+                            </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-btc"></i>
+                            <span>BITCOIN</span>
+                            </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <span>VISA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="descargas/CV.pdf" download class="descarga">Descargar</a>
+        </div>
+    </section>
+
+<!-- HABILIDADES -->
+
+<section id="habilidades" class="habilidades">
+    <div class="contenido-seccion">
+        <h2>HABILIDADES</h2>
+        <div class="estadisticas">
+            <div class="wrapper">
+                <div class="card">
+                  <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                  </div>
+                  <div class="text">HTML & CSS</div>
+                </div>
+                <div class="card js">
+                  <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                  </div>
+                  <div class="text">JavaScript</div>
+                </div>
+                <div class="card node">
+                  <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                  </div>
+                  <div class="text">NodeJs</div>
+                </div>
+                <div class="card react">
+                  <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                  </div>
+                  <div class="text">React JS</div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</section>
+
+    <!-- EXPERIENCIA -->
+    
+    <section id="experiencia" class="experiencia">
+        <div class="contenido-seccion">
+            <h2>EXPERIENCIA</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <div class="item izq">
+                        <h4>Arte y Multimedia</h4>
+                        <span class="casa">Mercado Libre</span>
+                        <span class="fecha">2006 - 2008</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis? nostrum temporibus veritatis</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Full Stack Developer</h4>
+                        <span class="casa">Luzu Tv</span>
+                        <span class="fecha">2013 - 2015</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis? nostrum temporibus veritatis</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Front Developer</h4>
+                        <span class="casa">Bru Bank</span>
+                        <span class="fecha">2017 - 2020</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis? nostrum temporibus veritatis</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <div class="item der">
+                        <h4>Front Developer</h4>
+                        <span class="casa">Google</span>
+                        <span class="fecha">2010 - 2012</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis? nostrum temporibus veritatis</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Arte y Multimedia</h4>
+                        <span class="casa">Buenbit</span>
+                        <span class="fecha">2015 - 2016</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis? nostrum temporibus veritatis</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Full Stack Developer</h4>
+                        <span class="casa">FIFA</span>
+                        <span class="fecha">2021 - 2022</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis? nostrum temporibus veritatis</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CONTACTO -->
+    
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <form target="_blank" action="https://formsubmit.co/b58bd4e0660a7fad44a7348201a15639" method="POST">
+                    
+                    <input type="text" name="Nombre" class="form-control" placeholder="Nombre" required>
+                    
+                    <input type="email" name="Email" class="form-control" placeholder="E-Mail" required>
+                    
+                    <textarea placeholder="Mensaje" class="form-control" name="Mensaje" rows="10" required></textarea>
+                    
+                    <button type="submit" class="enviar">Enviar</button>
+                    
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/Portfolio%201%20Messi%20Backup/">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                </div>               
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+            <h3>Todos los derechos reservados</h3>
+            <h3>©</h3>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
