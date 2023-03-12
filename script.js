@@ -75,8 +75,6 @@ function descargarArchivo() {
 // Boton de enviar formulario
 const formulario = document.querySelector('#contacto form');
 
-const formulario = document.querySelector('#contacto form');
-
 formulario.addEventListener('submit', function (event) {
   event.preventDefault();
 
