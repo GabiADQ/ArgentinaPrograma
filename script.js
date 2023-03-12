@@ -75,6 +75,8 @@ function descargarArchivo() {
 // Boton de enviar formulario
 const formulario = document.querySelector('#contacto form');
 
+const formulario = document.querySelector('#contacto form');
+
 formulario.addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -83,25 +85,8 @@ formulario.addEventListener('submit', function (event) {
     body: new FormData(formulario),
   })
     .then(response => {
-      // Mostrar mensaje con SweetAlert
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'center',
-        background: '#b9e5fa',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        }
-      })
-      Toast.fire({
-        icon: 'success',
-        title: 'Gracias por tu mensaje'
-      })
+      // Mostrar mensaje con JavaScript
+      window.alert('Gracias por tu mensaje');
       formulario.reset(); // Limpiar el formulario después de enviar
     })
     .catch(error => {
