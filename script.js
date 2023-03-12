@@ -83,8 +83,12 @@ formulario.addEventListener('submit', function (event) {
     body: new FormData(formulario),
   })
     .then(response => {
-      // Mostrar mensaje con JavaScript
-      window.alert('Gracias por tu mensaje');
+      // Abrir una ventana emergente con el mensaje
+      const mensaje = 'Gracias por tu mensaje';
+      const ventana = window.open('', '', 'width=300,height=200');
+      ventana.document.write(mensaje);
+      setTimeout(function() { ventana.close(); }, 5000);
+
       formulario.reset(); // Limpiar el formulario después de enviar
     })
     .catch(error => {
