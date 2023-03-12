@@ -83,13 +83,27 @@ formulario.addEventListener('submit', function (event) {
     body: new FormData(formulario),
   })
     .then(response => {
-      // Mostrar mensaje con JavaScript después de 1 segundo
-      setTimeout(() => {
-        window.alert('Gracias por tu mensaje');
-        formulario.reset(); // Limpiar el formulario después de enviar
-      }, 3000);
+      // Mostrar mensaje con SweetAlert
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        background: '#b9e5fa',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+      Toast.fire({
+        icon: 'success',
+        title: 'Gracias por tu mensaje'
+      })
+      formulario.reset(); // Limpiar el formulario después de enviar
     })
     .catch(error => {
       console.error('Error al enviar el formulario', error);
     });
-});
