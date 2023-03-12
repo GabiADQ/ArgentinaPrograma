@@ -87,7 +87,7 @@ formulario.addEventListener('submit', function (event) {
       setTimeout(() => {
         window.alert('Gracias por tu mensaje');
         formulario.reset(); // Limpiar el formulario después de enviar
-      }, 1000);
+      }, 3000);
     })
     .catch(error => {
       console.error('Error al enviar el formulario', error);
