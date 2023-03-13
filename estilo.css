@@ -63,7 +63,7 @@ html{
     background: linear-gradient(to top, rgba(67, 179, 243, 0.342), rgba(252, 254, 255, 0.452)),
     url(img/fondo.jpg); 
     background-size: cover;
-    height: 75vh;
+    height: 100vh;
     color: #fff;
     display: flex;
     align-items: center;
