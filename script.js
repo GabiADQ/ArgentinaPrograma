@@ -1,3 +1,4 @@
+// Menu
 let menuVisible = false;
 //Función que oculta o muestra el menu
 function mostrarOcultarMenu(){
@@ -42,6 +43,7 @@ function animateCircles() {
 }
 
 // Define una función para comprobar si el elemento está en la pantalla
+
 $.fn.isOnScreen = function(){
     var win = $(window);
     var viewport = {
@@ -57,6 +59,7 @@ $.fn.isOnScreen = function(){
 };
 
 // Llama a la función animateCircles cuando los círculos están en la pantalla
+
 $(window).on("scroll", function() {
   if ($(".circle").isOnScreen() && !$(".circle .bar").hasClass("animated")) {
     animateCircles();
@@ -65,6 +68,7 @@ $(window).on("scroll", function() {
 });
 
 // Decargar archivo (lo hago acá para probar un poco más js)
+
 function descargarArchivo() {
   var link = document.createElement('a');
   link.setAttribute('href', '/descargas/CV.pdf');
@@ -73,37 +77,34 @@ function descargarArchivo() {
 }
 
 // Boton de enviar formulario
+
 const formulario = document.querySelector('#contacto form');
+const botonSubmit = formulario.querySelector('button[type="submit"]');
 
 formulario.addEventListener('submit', function (event) {
   event.preventDefault();
+
+  // Mostrar texto "enviando" en el botón submit
+  botonSubmit.innerText = 'Enviando...';
 
   fetch(formulario.action, {
     method: 'POST',
     body: new FormData(formulario),
   })
     .then(response => {
-      // Mostrar mensaje con SweetAlert
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'center',
-        background: '#b9e5fa',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        }
-      })
-      Toast.fire({
-        icon: 'success',
-        title: 'Gracias por tu mensaje'
-      })
-      formulario.reset(); // Limpiar el formulario después de enviar
+      // Mostrar mensaje de éxito en el botón submit
+      botonSubmit.innerText = 'Enviado';
+      setTimeout(() => {
+        botonSubmit.innerText = 'Enviar';
+        formulario.reset(); // Limpiar el formulario después de enviar
+      }, 3000);
     })
     .catch(error => {
       console.error('Error al enviar el formulario', error);
+      // Mostrar mensaje de error en el botón submit
+      botonSubmit.innerText = 'Error';
+      setTimeout(() => {
+        botonSubmit.innerText = 'Enviar';
+      }, 3000);
     });
+});
