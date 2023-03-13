@@ -529,10 +529,6 @@ footer .arriba{
     .experiencia .fila .col{
         width: 90%;
     }
-    .experiencia .fila .derecha{
-        margin-left: 20px;
-    }
-
     .habilidades .estadisticas{
         display: flex;
         width: 100%;
