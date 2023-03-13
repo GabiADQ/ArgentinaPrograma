@@ -1,7 +1,7 @@
-// Menu
+//MENU
 
 let menuVisible = false;
-//Función que oculta o muestra el menu
+
 function mostrarOcultarMenu(){
     if(menuVisible){
         document.getElementById("nav").classList ="";
@@ -17,7 +17,7 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
-// Define una función para animar los círculos
+// ESTADISTICAS
 function animateCircles() {
   let options = {
     startAngle: -1.55,
@@ -43,8 +43,7 @@ function animateCircles() {
   });
 }
 
-// Define una función para comprobar si el elemento está en la pantalla
-
+// COMPRUEBA SI LOS CIRCULOS ESTÁN EN PANTALLA
 $.fn.isOnScreen = function(){
     var win = $(window);
     var viewport = {
@@ -59,8 +58,6 @@ $.fn.isOnScreen = function(){
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 };
 
-// Llama a la función animateCircles cuando los círculos están en la pantalla
-
 $(window).on("scroll", function() {
   if ($(".circle").isOnScreen() && !$(".circle .bar").hasClass("animated")) {
     animateCircles();
@@ -68,8 +65,7 @@ $(window).on("scroll", function() {
   }
 });
 
-// Decargar archivo (lo hago acá para probar un poco más js)
-
+// DESCARGAR ARCHIVO (lo hago acá para probar un poco más js)
 function descargarArchivo() {
   var link = document.createElement('a');
   link.setAttribute('href', '/descargas/CV.pdf');
@@ -77,7 +73,7 @@ function descargarArchivo() {
   link.click();
 }
 
-// Boton de enviar formulario
+// ENVIAR FORMULARIO (lo habia hecho en php pero lo subí y me di cuenta que Github no lo soportaba asi que improvise esto)
 
 const formulario = document.querySelector('#contacto form');
 const botonSubmit = formulario.querySelector('button[type="submit"]');
@@ -109,3 +105,5 @@ formulario.addEventListener('submit', function (event) {
       }, 3000);
     });
 });
+
+
